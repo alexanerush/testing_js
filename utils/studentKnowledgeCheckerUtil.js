@@ -5,7 +5,7 @@
  * @param {Object} correctAnswers - Correct answers in the same format.
  * @returns {boolean} Returns true if all answers are correct, and false if at least one answer is incorrect.
  */
-function checkStudentKnowledge(studentAnswers, correctAnswers) {
+  export function checkStudentKnowledge(studentAnswers, correctAnswers) {
   const studentKeys = Object.keys(studentAnswers);
   const correctKeys = Object.keys(correctAnswers);
 
