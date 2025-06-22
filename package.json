@@ -1,15 +1,18 @@
 {
-  "name": "auto-testing-repo",
+  "name": "testing_js",
   "version": "1.0.0",
-  "type": "module",
+  "description": "",
+  "main": "test.js",
   "scripts": {
-    "test": "mocha utils/test/**/*.test.js --reporter mochawesome --reporter-options reportDir=reports,reportFilename=test-report,html=true",
-    "coverage": "c8 mocha utils/test/**/*.test.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "chai": "^4.3.7",
-    "mocha": "^10.2.0",
-    "c8": "^8.0.1"
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.32.0",
+    "husky": "^9.1.7"
   }
 }
-
