@@ -1,10 +1,18 @@
 import { expect } from 'chai';
-import { filterUsersByAge, sortUsersByName, findUserById, isEmailTaken } from '../usersListUtils.js';
+import {
+  filterUsersByAge, sortUsersByName, findUserById, isEmailTaken,
+} from '../usersListUtils';
 
 const users = [
-  { id: 1, name: 'Alice', age: 20, email: 'alice@example.com' },
-  { id: 2, name: 'Bob', age: 25, email: 'bob@example.com' },
-  { id: 3, name: 'Charlie', age: 30, email: 'charlie@example.com' }
+  {
+    id: 1, name: 'Alice', age: 20, email: 'alice@example.com',
+  },
+  {
+    id: 2, name: 'Bob', age: 25, email: 'bob@example.com',
+  },
+  {
+    id: 3, name: 'Charlie', age: 30, email: 'charlie@example.com',
+  },
 ];
 
 describe('usersListUtils', () => {
@@ -18,7 +26,7 @@ describe('usersListUtils', () => {
   describe('sortUsersByName', () => {
     it('sorts users alphabetically', () => {
       const sorted = sortUsersByName(users);
-      expect(sorted.map(u => u.name)).to.deep.equal(['Alice', 'Bob', 'Charlie']);
+      expect(sorted.map((u) => u.name)).to.deep.equal(['Alice', 'Bob', 'Charlie']);
     });
   });
 
@@ -28,17 +36,17 @@ describe('usersListUtils', () => {
     });
 
     it('returns null if user not found', () => {
-      expect(findUserById(users, 999)).to.be.null;
+      expect(findUserById(users, 999)).to.equal(null);
     });
   });
 
   describe('isEmailTaken', () => {
     it('returns true if email is taken', () => {
-      expect(isEmailTaken(users, 'alice@example.com')).to.be.true;
+      expect(isEmailTaken(users, 'alice@example.com')).to.equal(true);
     });
 
     it('returns false if email is not taken', () => {
-      expect(isEmailTaken(users, 'nobody@nowhere.com')).to.be.false;
+      expect(isEmailTaken(users, 'nobody@nowhere.com')).to.equal(false);
     });
   });
 });

@@ -1,29 +1,28 @@
-
 /**
- * The function takes an object with the student's answers and compares them with the correct answers.
- * @param {Object} studentAnswers - Student answers in the format { question1: answer1, question2: answer2, ... }.
- * @param {Object} correctAnswers - Correct answers in the same format.
- * @returns {boolean} Returns true if all answers are correct, and false if at least one answer is incorrect.
+ * Compares student's answers to correct ones.
+ * @param {Object} studentAnswers - { question1: answer1, ... }.
+ * @param {Object} correctAnswers - Same format as studentAnswers.
+ * @returns {boolean} True if all answers match, otherwise false.
  */
-  export function checkStudentKnowledge(studentAnswers, correctAnswers) {
-  const studentKeys = Object.keys(studentAnswers);
-  const correctKeys = Object.keys(correctAnswers);
-
-  if (studentKeys.length !== correctKeys.length) {
-    return false;
+function checkStudentKnowledge(studentAnswers, correctAnswers) {
+  if (
+    typeof studentAnswers !== 'object'
+    || typeof correctAnswers !== 'object'
+  ) {
+    throw new Error('Both arguments must be objects');
   }
 
-  for (let i = 0; i < studentKeys.length; i++) {
-    if (studentKeys[i] !== correctKeys[i]) {
-      return false;
-    }
-  }
+  const studentKeys = Object.keys(studentAnswers).sort();
+  const correctKeys = Object.keys(correctAnswers).sort();
 
-  for (let key of studentKeys) {
-    if (studentAnswers[key] !== correctAnswers[key]) {
-      return false;
-    }
-  }
+  if (studentKeys.length !== correctKeys.length) return false;
 
-  return true;
+  const keysMatch = studentKeys.every((key, i) => key === correctKeys[i]);
+  if (!keysMatch) return false;
+
+  return studentKeys.every(
+    (key) => studentAnswers[key] === correctAnswers[key],
+  );
 }
+
+export default checkStudentKnowledge;

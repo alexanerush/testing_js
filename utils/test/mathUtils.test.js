@@ -1,5 +1,7 @@
 import { expect } from 'chai';
-import { add, subtract, multiply, divide } from '../mathUtils.js';
+import {
+  add, subtract, multiply, divide,
+} from '../mathUtils';
 
 describe('mathUtils', () => {
   it('adds two numbers', () => {
@@ -19,6 +21,6 @@ describe('mathUtils', () => {
   });
 
   it('throws error when dividing by 0', () => {
-    expect(() => divide(10, 0)).to.throw("Cannot divide by zero");
+    expect(() => divide(10, 0)).to.throw('Cannot divide by zero');
   });
 });
