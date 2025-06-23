@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { capitalize, reverseString, isPalindrome } from '../stringUtils.js';
+import { capitalize, reverseString, isPalindrome } from '../stringUtils';
 
 describe('stringUtils', () => {
   describe('capitalize', () => {
@@ -8,7 +8,7 @@ describe('stringUtils', () => {
     });
 
     it('throws if input is not string', () => {
-      expect(() => capitalize(123)).to.throw("Input must be a string");
+      expect(() => capitalize(123)).to.throw('Input must be a string');
     });
   });
 
@@ -18,21 +18,21 @@ describe('stringUtils', () => {
     });
 
     it('throws if input is not string', () => {
-      expect(() => reverseString({})).to.throw("Input must be a string");
+      expect(() => reverseString({})).to.throw('Input must be a string');
     });
   });
 
   describe('isPalindrome', () => {
     it('returns true for palindrome', () => {
-      expect(isPalindrome('madam')).to.be.true;
+      expect(isPalindrome('madam')).to.equal(true);
     });
 
     it('returns false for non-palindrome', () => {
-      expect(isPalindrome('hello')).to.be.false;
+      expect(isPalindrome('hello')).to.equal(false);
     });
 
     it('throws if input is not string', () => {
-      expect(() => isPalindrome([])).to.throw("Input must be a string");
+      expect(() => isPalindrome([])).to.throw('Input must be a string');
     });
   });
 });

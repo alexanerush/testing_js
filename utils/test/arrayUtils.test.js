@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { findMax, findMin, removeDuplicates } from '../arrayUtils.js';
+import { findMax, findMin, removeDuplicates } from '../arrayUtils';
 
 describe('arrayUtils', () => {
   describe('findMax', () => {
@@ -7,7 +7,7 @@ describe('arrayUtils', () => {
       expect(findMax([1, 5, 3])).to.equal(5);
     });
     it('throws error if input is not array', () => {
-      expect(() => findMax(123)).to.throw("Input must be an array");
+      expect(() => findMax(123)).to.throw('Input must be an array');
     });
   });
 
@@ -16,7 +16,7 @@ describe('arrayUtils', () => {
       expect(findMin([1, 5, 3])).to.equal(1);
     });
     it('throws error if input is not array', () => {
-      expect(() => findMin("test")).to.throw("Input must be an array");
+      expect(() => findMin('test')).to.throw('Input must be an array');
     });
   });
 
@@ -25,7 +25,7 @@ describe('arrayUtils', () => {
       expect(removeDuplicates([1, 2, 2, 3])).to.deep.equal([1, 2, 3]);
     });
     it('throws error if input is not array', () => {
-      expect(() => removeDuplicates(null)).to.throw("Input must be an array");
+      expect(() => removeDuplicates(null)).to.throw('Input must be an array');
     });
   });
 });
