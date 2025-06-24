@@ -1,8 +1,19 @@
-import { defineConfig } from 'cypress';
-import 'cypress-mochawesome-reporter/register';
+const { defineConfig } = require('cypress');
+const mochawesome = require('cypress-mochawesome-reporter/plugin');
 
-export default defineConfig({
+module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://demoqa.com',
+    setupNodeEvents(on, config) {
+      mochawesome(on);
+      return config;
+    },
+  },
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'My Test Suite',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
   },
 });
