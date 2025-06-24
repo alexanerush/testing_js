@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-24T15:37:28.809Z",
+    "end": "2025-06-24T15:37:40.998Z",
+    "duration": 12189,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "91965e75-a1ee-4c25-a29c-fd900cd489b3",
+      "title": "",
+      "fullFile": "cypress/e2e/alerts.pom.cy.js",
+      "file": "cypress/e2e/alerts.pom.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e8ca81f8-7b2f-4a87-b772-e924c367e93c",
+          "title": "Alerts Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "handles alert box",
+              "fullTitle": "Alerts Page handles alert box",
+              "timedOut": null,
+              "duration": 1796,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AlertsPage.alertsPage.clickAlertButton();",
+              "err": {},
+              "uuid": "1c2718b5-ec29-4be0-87a7-084fae9c157b",
+              "parentUUID": "e8ca81f8-7b2f-4a87-b772-e924c367e93c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "handles timed alert",
+              "fullTitle": "Alerts Page handles timed alert",
+              "timedOut": null,
+              "duration": 5937,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AlertsPage.alertsPage.clickTimerAlertButton();",
+              "err": {},
+              "uuid": "90362af2-35b5-49bd-a5b6-0341fc6ac71e",
+              "parentUUID": "e8ca81f8-7b2f-4a87-b772-e924c367e93c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "handles confirm alert with Ok",
+              "fullTitle": "Alerts Page handles confirm alert with Ok",
+              "timedOut": null,
+              "duration": 1006,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AlertsPage.alertsPage.clickConfirmButton(true);",
+              "err": {},
+              "uuid": "4245f26d-58e0-4d79-bfdd-9f73eaf25f20",
+              "parentUUID": "e8ca81f8-7b2f-4a87-b772-e924c367e93c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "handles confirm alert with Cancel",
+              "fullTitle": "Alerts Page handles confirm alert with Cancel",
+              "timedOut": null,
+              "duration": 1005,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AlertsPage.alertsPage.clickConfirmButton(false);",
+              "err": {},
+              "uuid": "275a146c-e985-4c76-b499-d65779fbdf20",
+              "parentUUID": "e8ca81f8-7b2f-4a87-b772-e924c367e93c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "handles prompt alert",
+              "fullTitle": "Alerts Page handles prompt alert",
+              "timedOut": null,
+              "duration": 846,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AlertsPage.alertsPage.clickPromptButton('Санечка');",
+              "err": {},
+              "uuid": "3ad71264-12d4-456d-b915-fd585d604ef8",
+              "parentUUID": "e8ca81f8-7b2f-4a87-b772-e924c367e93c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1c2718b5-ec29-4be0-87a7-084fae9c157b",
+            "90362af2-35b5-49bd-a5b6-0341fc6ac71e",
+            "4245f26d-58e0-4d79-bfdd-9f73eaf25f20",
+            "275a146c-e985-4c76-b499-d65779fbdf20",
+            "3ad71264-12d4-456d-b915-fd585d604ef8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10590,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
