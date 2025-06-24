@@ -9,10 +9,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cypress": "^14.5.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  },
   "devDependencies": {
     "chai": "^5.2.0",
-    "cypress": "^14.5.0",
-    "cypress-mochawesome-reporter": "^3.8.2",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.32.0",

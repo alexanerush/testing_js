@@ -1,21 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies, global-require, no-unused-vars */
-const { defineConfig } = require('cypress');
+import { defineConfig } from 'cypress';
+import mochawesome from 'cypress-mochawesome-reporter/plugin';
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
-    baseUrl: 'https://demoqa.com',
-    setupNodeEvents(on, config) {
-      require('cypress-mochawesome-reporter/plugin')(on);
+    setupNodeEvents(on) {
+      mochawesome(on);
     },
   },
-  reporter: 'cypress-mochawesome-reporter',
-  reporterOptions: {
-    charts: true,
-    reportPageTitle: 'UI Test Report',
-    embeddedScreenshots: true,
-    inlineAssets: true,
-    saveAllAttempts: false,
-    overwrite: false,
-    reportDir: 'cypress/reports/mochawesome',
-  },
+  baseUrl: 'https://demoqa.com',
 });
