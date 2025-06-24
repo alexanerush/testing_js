@@ -1,11 +1,8 @@
 import { defineConfig } from 'cypress';
-import mochawesome from 'cypress-mochawesome-reporter/plugin';
+import 'cypress-mochawesome-reporter/register';
 
 export default defineConfig({
   e2e: {
-    setupNodeEvents(on) {
-      mochawesome(on);
-    },
+    baseUrl: 'https://demoqa.com',
   },
-  baseUrl: 'https://demoqa.com',
 });
