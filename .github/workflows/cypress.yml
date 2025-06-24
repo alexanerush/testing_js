@@ -22,19 +22,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-     - name: Run Cypress tests
-       run: npx cypress run --config-file cypress.config.mjs --reporter cypress-mochawesome-reporter
-
+      - name: Run Cypress tests
+        run: npx cypress run --reporter cypress-mochawesome-reporter
 
       - name: Upload Mochawesome Report
-        uses: actions/upload-artifact@v4
+        if: always()
+        uses: actions/upload-artifact@v3
         with:
           name: mochawesome-report
-          path: cypress/reports/mochawesome
+          path: mochawesome-report
 
-      - name: Upload Screenshots
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
