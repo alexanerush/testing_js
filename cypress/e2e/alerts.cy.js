@@ -5,6 +5,7 @@ Cypress.on('uncaught:exception', () => false);
 describe('Alerts Page', () => {
   beforeEach(() => {
     cy.visit('https://demoqa.com/alerts');
+    cy.wait(3000); // Добавлена задержка для CI, чтобы страница успела загрузиться
   });
 
   it('checks alert with OK button', () => {
