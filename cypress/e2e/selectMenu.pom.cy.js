@@ -6,10 +6,10 @@ describe('Select Menu Page', () => {
     selectMenuPage.visit();
   });
 
-  it('selects all necessary options from dropdowns using POM', () => {
-    selectMenuPage.selectGroupOption();
-    selectMenuPage.selectOneOption();
-    selectMenuPage.selectOldStyleMenu();
-    selectMenuPage.selectMultiOptions();
+  it('selects values from all dropdowns', () => {
+    selectMenuPage.selectGroupOption('Group 1, option 2');
+    selectMenuPage.selectOneOption('Dr.');
+    selectMenuPage.selectOldStyleMenu('Blue');
+    selectMenuPage.selectMultiOptions(['Green', 'Blue']);
   });
 });

@@ -1,11 +1,9 @@
-/* global Cypress, cy, expect */
-
 Cypress.on('uncaught:exception', () => false);
 
 describe('Alerts Page', () => {
   beforeEach(() => {
     cy.visit('https://demoqa.com/alerts');
-    cy.wait(3000); // Добавлена задержка для CI, чтобы страница успела загрузиться
+    cy.wait(3000);
   });
 
   it('checks alert with OK button', () => {

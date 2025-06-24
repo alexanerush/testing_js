@@ -1,19 +1,18 @@
 class DatePickerPage {
-    visit() {
-      cy.visit('https://demoqa.com/date-picker');
-    }
-  
-    selectDate(date) {
-      cy.get('#datePickerMonthYearInput')
-        .clear()
-        .type(`${date}{enter}`);
-    }
-  
-    checkSelectedDate(expectedDate) {
-      cy.get('#datePickerMonthYearInput')
-        .should('have.value', expectedDate);
-    }
+  visit() {
+    cy.visit('https://demoqa.com/date-picker');
   }
-  
-  export const datePickerPage = new DatePickerPage();
-  
+
+  selectDate(date) {
+    cy.get('#datePickerMonthYearInput').then(($input) => {
+      cy.wrap($input).clear();
+      cy.wrap($input).type(`${date}{enter}`);
+    });
+  }
+
+  checkSelectedDate(expectedDate) {
+    cy.get('#datePickerMonthYearInput').should('have.value', expectedDate);
+  }
+}
+
+export const datePickerPage = new DatePickerPage();

@@ -10,7 +10,7 @@ describe('Checkbox Page', () => {
     checkboxPage.expandAll();
 
     const items = ['Desktop', 'Documents', 'Downloads'];
-    items.forEach(item => {
+    items.forEach((item) => {
       checkboxPage.selectCheckbox(item);
       checkboxPage.checkResult(item);
     });

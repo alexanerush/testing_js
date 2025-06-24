@@ -6,8 +6,9 @@ describe('Date Picker Page', () => {
     datePickerPage.visit();
   });
 
-  it('selects a specific date and checks it', () => {
-    const targetDate = '06/25/2025'; 
+  it('selects a specific date and checks the result', () => {
+    const targetDate = '06/30/2025';
+
     datePickerPage.selectDate(targetDate);
     datePickerPage.checkSelectedDate(targetDate);
   });

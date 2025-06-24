@@ -6,19 +6,19 @@ describe('Tool Tips Page', () => {
     toolTipsPage.visit();
   });
 
-  it('shows tooltip on hovering the button', () => {
-    toolTipsPage.hoverOnToolTip('#toolTipButton', 'You hovered over the Button');
+  it('shows tooltip on hover over the button', () => {
+    toolTipsPage.hoverOnToolTip('#toolTipButton');
   });
 
-  it('shows tooltip on hovering the text field', () => {
-    toolTipsPage.hoverOnToolTip('#toolTipTextField', 'You hovered over the text field');
+  it('shows tooltip on hover over the text field', () => {
+    toolTipsPage.hoverOnToolTip('#toolTipTextField');
   });
 
-  it('shows tooltip on hovering the Contrary link', () => {
-    toolTipsPage.hoverOnToolTipByText('a', 'Contrary', 'You hovered over the Contrary');
+  it('shows tooltip on hover over the first link', () => {
+    toolTipsPage.hoverOnToolTipByText('Contrary');
   });
 
-  it('shows tooltip on hovering the 1.10.32 link', () => {
-    toolTipsPage.hoverOnToolTipByText('a', '1.10.32', 'You hovered over the 1.10.32');
+  it('shows tooltip on hover over the second link', () => {
+    toolTipsPage.hoverOnToolTipByText('1.10.32');
   });
 });

@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:cypress/recommended"
+  ],
+  "plugins": [
+    "import",
+    "cypress"
+  ],
+  "rules": {
+    "no-console": "off",
+    "no-unused-vars": "warn",
+    "no-undef": "off",
+    "no-trailing-spaces": "warn",
+    "eol-last": "warn",
+    "import/no-extraneous-dependencies": "off",
+    "global-require": "off",
+    "class-methods-use-this": "off",
+    "cypress/no-unnecessary-waiting": "off",
+    "import/prefer-default-export": "off"
+  }
+}

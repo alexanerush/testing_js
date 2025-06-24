@@ -14,12 +14,11 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
 import 'cypress-mochawesome-reporter/register';
 
 Cypress.on('fail', (error, runnable) => {
-    const screenshotFileName = `${runnable.parent.title} -- ${runnable.title} (failed).png`;
-    cy.screenshot(screenshotFileName);
-    throw error; 
-  });
-  
+  const screenshotFileName = `${runnable.parent.title} -- ${runnable.title} (failed).png`;
+  cy.screenshot(screenshotFileName);
+  throw error;
+});

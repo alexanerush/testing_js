@@ -1,17 +1,18 @@
-import { radioPage } from '../support/pages/RadioButtonPage';
+import { radioButtonPage } from '../support/pages/RadioButtonPage';
 
 describe('Radio Button Page', () => {
   beforeEach(() => {
     Cypress.on('uncaught:exception', () => false);
-    radioPage.visit();
+    radioButtonPage.visit();
   });
 
-  const options = ['Yes', 'Impressive'];
+  it('selects Yes and checks result', () => {
+    radioButtonPage.selectRadio('Yes');
+    radioButtonPage.checkResult('Yes');
+  });
 
-  options.forEach(option => {
-    it(`selects ${option} radio button`, () => {
-      radioPage.selectRadio(option);
-      radioPage.checkResult(option);
-    });
+  it('selects Impressive and checks result', () => {
+    radioButtonPage.selectRadio('Impressive');
+    radioButtonPage.checkResult('Impressive');
   });
 });
