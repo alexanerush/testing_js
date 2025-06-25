@@ -1,13 +1,15 @@
+import { datePickerPage } from '../support/pages/DatePickerPage';
+
 describe('Date Picker Page', () => {
   beforeEach(() => {
     Cypress.on('uncaught:exception', () => false);
-    DatePickerPage.visit();
+    datePickerPage.visit();
   });
 
   it('selects a specific date and checks the result', () => {
     const targetDate = '06/30/2025';
 
-    DatePickerPage.selectDate(targetDate);
-    DatePickerPage.checkSelectedDate(targetDate);
+    datePickerPage.selectDate(targetDate);
+    datePickerPage.checkSelectedDate(targetDate);
   });
 });
