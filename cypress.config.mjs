@@ -1,5 +1,5 @@
 import { defineConfig } from 'cypress';
-import mochawesome from 'cypress-mochawesome-reporter/plugin';
+import mochawesome from 'cypress-mochawesome-reporter/plugin.js';
 
 export default defineConfig({
   reporter: 'cypress-mochawesome-reporter',
