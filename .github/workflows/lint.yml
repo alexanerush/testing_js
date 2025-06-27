@@ -19,5 +19,4 @@ jobs:
         run: npm ci
 
       - name: Run ESLint
-        run: npx eslint "**/*.js" --ignore-path .eslintignore
-
+        run: npx eslint "**/*.js"
